@@ -10,19 +10,33 @@
 			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
 			crossorigin="anonymous"
 		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+			integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+			integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+			crossorigin="anonymous"
+		></script>
 	</head>
 	<style>
 		body {
 			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 				"Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
 				"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+			margin-right: 0px;
 		}
-		.navbar {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			padding-left: 2vw;
-			position: fixed;
+		body {
+			box-sizing: border-box;
+			padding: 0px;
+			margin: 0px;
 		}
 		h1 {
 			font-size: 26px;
@@ -33,7 +47,7 @@
 			text-decoration: none;
 		}
 		a {
-			color: darkblue;
+			color: white;
 			text-decoration: none;
 			font-size: 24px;
 		}
@@ -41,7 +55,8 @@
 			color: darkmagenta;
 		}
 		.page1 {
-			background-image: url(./the-town-bg-01.jpg);
+			/* background-image: url(./the-town-bg-01.jpg); */
+			background-image: url(./bg2.jpg);
 			background-size: cover;
 			height: 100vh;
 			background-attachment: fixed;
@@ -54,21 +69,24 @@
 			padding-left: 45vw;
 		}
 		.content {
-			width: 26vw;
+			width: 100%;
 			height: 40vh;
-			margin-left: auto;
-			margin-right: auto;
-			text-align: center;
+			/* margin-left: auto;
+			margin-right: auto; */
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 		}
 		.heading {
 			font-size: 46px;
 			color: #ffff;
 		}
 		.subheading {
+			width: 30%;
+			text-align: center;
 			font-size: 30px;
 			color: white;
-		}
-		.content2 {
 		}
 		.heading2 {
 			font-size: 46px;
@@ -93,7 +111,7 @@
 		.btn1t {
 			font-size: 20px;
 			color: white;
-			padding: 0px;
+			padding-top: 10px;
 		}
 		#page2 {
 			padding-left: 10px;
@@ -101,6 +119,7 @@
 			padding-top: 10.7vw;
 			column-gap: 2vw;
 			gap: 2vw;
+			padding-right: 20px;
 		}
 		svg {
 			height: 70px;
@@ -117,46 +136,239 @@
 			padding-top: 12vh;
 			gap: 3vw;
 		}
-		h1 {
+		h1,h2 {
 			color: cornflowerblue;
 		}
 		.part4 {
-			font-size: 20px;
+			font-size: auto;
 			color: grey;
 			text-align: justify;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 		#page3 {
 			padding-bottom: 15vh;
-			padding-left: 10px;
+			padding:10px;
 		}
+		
+		.i1 {
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			width: 670px;
+		}
+		#i2 {
+			padding-top: 10vh;
+			font-size: 35px;
+			color: cornflowerblue;
+			text-align: center;
+		}
+		.part5 {
+			font-size: 17px;
+			color: grey;
+		}
+		.im1 {
+			width: 410px;
+			height: 400px;
+			padding-left: 20px;
+		}
+		.images {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+			gap: 20px;
+			padding-left: 10px;
+			height: fit-content;
+			/* margin-bottom: 28vw; */
+		}
+		.onim1 {
+			/* margin-top: -250px; */
+			color: white;
+			border: 2px solid black;
+			height: 300px;
+			width: 200px;
+			background-color: black;
+			position: absolute;
+			z-index: 4;
+			margin: -300px 0px 0px 0px;
+			opacity: 0.5;
+			/* top: 250px;
+			left: 70px; */
+			visibility: hidden;
+		}
+		img:hover {
+			background-color: azure;
+		}
+		#page5 {
+			background-image: url(./bg3.jpg);
+			width: 100%;
+			height: 90vh;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		.im1:hover ~ .onim1 {
+			visibility: visible;
+			margin: -300px 0px 0px 0px;
+		}
+		#hello {
+			margin: 200px 0px 0px 0px;
+		}
+		.container1{
+			/* margin: auto;
+			margin-left: 10px; */
+			
+		}
+		.f-content{
+			font-size: 40px;
+			color: white;
+			margin-top: 60px;
+			display: flex;
+			justify-content:center;
+		}
+		.town1{
+			width: 50vw;
+		}
+		.reach{
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			padding: 20px;
+		}
+		#explore{
+			margin-left: 40vw;
+			text-align: center;
+			
+		}
+		.call{
+			color: #ffff;
+			font-size: 36px;
+			display: inline-block;
+			margin-top: 5px;
+		}
+		.mail{
+			color: #ffff;
+			font-size: 36px;
+			display: inline;
+	
+		}
+		.icons{
+			align-content: center;
+			align-items: center;
+			display: grid;
+			
+			grid-template-columns: auto auto;
+			padding: 6vw;
+			gap: 25px;
+		}
+		.final{
+			font-size: 20px;
+			padding: 5px;
+			text-align: center;
+			color: #ffff;
+		}
+		.git{
+			font-size: 20px;
+		}
+		.mailme{
+			font-size: 20px;
+		}
+		@keyframes animi1 {
+			from{
+				transform: translateY(0px);
+			}
+			to{
+				transform: rotate(45deg) translateY(-100px);
+			}
+		}
+		@keyframes animi2 {
+			from{
+				transform: translateY(0px);
+			}
+			to{
+				transform: translateY(20px);
+				scale: 1.2;
+			}
+		}
+		@keyframes animi3 {
+			from{
+				transform: translate(0px);
+			}
+			to{
+				transform: scale(1.1) perspective(10px);
+				
+			}
+		}
+		.im1:hover{
+			animation-name: animi3;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+		}
+
+		#svg1:hover{
+			animation-name: animi1;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+
+		}
+		#svg2:hover{
+			animation-name: animi2;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+		}
+		#svg3:hover{
+			animation-name: animi2;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+		}
+
+	
 		@media screen and (min-width: 300px) and (max-width: 900px) {
+			.page1 {
+				background-image: url(./the-town-bg-01.jpg);
+				background-size: cover;
+				height: 100vh;
+				background-attachment: fixed;
+				width: fit-content;
+			}
 			#page2 {
 				display: flex;
 				flex-direction: column;
 			}
+			.town1 {
+				width: 100%;
+			}
 			.part3 {
-				justify-content: center;
+				text-align: center;
 				width: 100%;
 			}
 			.media {
-				margin-left: 70px;
+				/* margin-left: 70px; */
+				padding: 20px;
 				text-align: center;
 			}
 			#page3 {
-				grid-template-columns: 30vw;
+				grid-template-columns: 100%;
+				align-content: center;
+				text-align: center;
+				align-items: center;
 			}
 			.p1,
 			.p2,
 			.p3 {
-				width: 350px;
+				width: auto;
+				padding: 10px;
 				text-align: center;
-				margin-left: 70px;
-				margin-right: auto;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-content: center;
+				align-items: center;
 			}
 			.images {
 				display: flex;
 				flex-direction: column;
-				gap: 20px;
+				gap: 10px;
 				justify-content: space-evenly;
 				padding-left: 10px;
 			}
@@ -169,236 +381,317 @@
 			#i2 {
 				font-size: 35px;
 				color: cornflowerblue;
+				width: 100%;
+				
 			}
-		}
-		.i1 {
-			margin-left: auto;
-			margin-right: auto;
-			text-align: center;
-			width: 670px;
-		}
-		#i2{
-			padding-top: 10vh;
-			font-size: 35px;
-			color: cornflowerblue;
-		}
-		.part5 {
-			font-size: 17px;
-			color: grey;
-		}
-		.im1 {
-			width: 200px;
-			height: 300px;
-		}
-		.images {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-evenly;
-			gap: 20px;
-			padding-left: 10px;
-			height: fit-content;
-			 margin-bottom: 28vw;
-		}
-		.onim1 {
-			color: white;
-			border: 2px solid black;
-			height: 300px;
-			width: 200px;
-			background-color: black;
-			position: absolute;
-			z-index: 4;
-			margin: -300px 0px 0px 0px;
-			opacity: 0.5;
 			
-			visibility: hidden;
+			.content {
+				width: 100%;
+				height: 40vh;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			.heading {
+				font-size: 46px;
+				color: #ffff;
+			}
+			.subheading {
+				width: 30%;
+				text-align: center;
+				font-size: 30px;
+				color: white;
+			}
+			.part5 {
+				font-size: 17px;
+				color: grey;
+				width: 100%;
+			}
+			.page1 {
+				background-image: url(./the-town-bg-01.jpg);
+				background-size: cover;
+				width: 100%;
+				height: 100vh;
+				background-attachment: fixed;
+			}
+			.images {
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				/* justify-content: space-evenly; */
+				gap: 20px;
+				padding-left: 10px;
+				height: fit-content;
+				margin-bottom: 28vw;
+			}
+			.im1 {
+				width: 134px;
+				height: 300px;
+			}
+			.onim1 {
+				
+				color: white;
+				border: 2px solid black;
+				height: 100px;
+				width: 200px;
+				background-color: black;
+				position: absolute;
+				z-index: 4;
+				margin: -300px 0px 0px 0px;
+				opacity: 0.5;
+				
+				visibility: hidden;
+			}
+			.page4 {
+				display: flex;
+				flex-direction: column;
+				align-content: center;
+			}
+			.reach{
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			padding: 10px;
 		}
-		img:hover {
-			background-color: azure;
+		#explore{
+			/* margin-left: 40vw; */
+			text-align: center;
+			width: fit-content;
+			margin-left: 24vw;
+			
+		}
+		.call{
+			color: #ffff;
+			font-size: 26px;
+			display: inline-block;
+			margin-top: 5px;
+		}
+		.mail{
+			color: #ffff;
+			font-size: 26px;
+			display: inline-block;
+	
+		}
+		.icons{
+			align-content: center;
+			align-items: center;
+			display: grid;
+			padding: 1px;
+			grid-template-columns: auto;
+		}
+		.final{
+			font-size: 15px;
+			text-align: center;
+			color: #ffff;
+		}
+		.git{
+			font-size: 15px;
 		}
 		#page5{
-			background-image: url(./the-town-bg-02.jpg);
-			width: 100%;
-			height: 90vh;
-			background-size: cover;
-			background-attachment: fixed;
+			/* width: 100%; */
 		}
-		.im1:hover ~ .onim1{
-			visibility: visible;
-			margin: -300px 0px 0px 0px;
+		.mailme{
+			font-size: 18px;
+		}
+		#submit{
+			padding-top: 10px;
+			margin-left:10px;
+		}
+		}
+		@media screen and (min-width:768px) and (max-width:1080px) {
+			.im1{
+				width: 250px;
+			}
+			#explore{
+			/* margin-left: 40vw; */
+			text-align: center;
+			width: fit-content;
+			margin-left: 40vw;
 			
 		}
-		#hello{
-			margin: 200px 0px 0px 0px;
-
-		} 
-
+		}
+	
 	</style>
 	<body>
+		<div class="container1">
 		<div class="page1">
-			<nav class="navbar">
-				<div>
-					<a href="#"><h1>The <span class="s1">Town</span></h1></a>
-				</div>
-				<div class="part2">
-					<li><a href="#page2">Introduction</a></li>
-					<li><a href="#i2">OurWork</a></li>
-					<li><a href="#page5">ContactUs</a></li>
-				</div>
+			<nav class="navbar navbar-expand-lg navbar-light py-2">
+				<a class="navbar-brand fixed-top" href="index.html">
+					<a href="#"
+					style="margin-top: 20px;margin-right: 33vw;"><h1>MANA<span class="s1 ms-1">VIZAG</span></h1></a
+					>
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
+          <span class="navbar-toggler-icon"></span> 
+        </button> 
+ 
+        <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
+          <ul class="navbar-nav mx-auto"> 
+            <li class="nav-item active"> 
+              <a class="nav-link " href="#page2"><a href="#page2" style="margin-left: 20px;">Introduction</a></a> 
+            </li> 
+            <li class="nav-item"> 
+              <a class="nav-link " href="#page3"><a href="#i2" style="margin-left: 20px;">Tourism</a></a> 
+            </li>
+			<li class="nav-item"> 
+				<a class="nav-link " href="#page3"><a href="#i2" style="margin-left: 20px;">Gallery</a></a> 
+			  </li> 
+            <li class="nav-item"> 
+              <a class="nav-link " href="#page5"><a href="#page5" style="margin-left: 20px;">ContactUs</a></a> 
+            </li> 
+        
+        </div> 
 			</nav>
+
 			<br /><br /><br /><br />
 			<div class="content">
-				<h1 class="heading">The <span class="s1">Town</span></h1>
-				<p class="subheading">Parallax Bootstrap Theme by TemplateMo</p>
+				<h1 class="heading">MANA <span class="s1 ms-1">VIZAG</span></h1>
+				<p class="subheading">City Of Destiny</p>
 			</div>
 		</div>
 		<div id="page2">
 			<div>
-				<img src="./the-town-01.jpg" />
+				<img class="town1" src="./vizag.jpg" />
 			</div>
 			<div class="media">
 				<h1 class="heading2">Introduction</h1>
 				<p class="part3">
-					The Town is simple CSS template built on Bootstrap v4.1.3 and this is
-					a little parallax layout that you can use for your websites.<br /><br />
-
-					Please tell your friends about our site templatemo. Thank you.
-					Curabitur dapibus tristique enim a imperdiet. Etiam tristique sem sed
-					condimentum posuere.
+					Visakhapatnam or Vizag is considered to be a port city of the state of Andhra Pradesh. The people living in this city belong to different religions, cultures, and race live with love and harmony. This city is concealed between the hills of the Eastern Ghats facing towards the direction of Bay of Bengal. It is also referred to as the “city of destiny” and “the jewel city of the east coast.”
 				</p>
 				<br />
-				<button class="btn1"><p class="btn1t">Read More</p></button>
+				<button class="btn1" ><a class="btn1t" href="https://en.wikipedia.org/wiki/Visakhapatnam">Read More</a></button>
 			</div>
 		</div>
 		<br /><br /><br /><br /><br />
+		<div class="reach"><h2>How I Can Reach VIZAG?</h2>
+		<p class="part3">Visakhapatnam is well-connected by air, rail, and road. It has its own airport, Visakhapatnam Airport (VTZ), with regular flights from major cities in India. The city also has a major railway station, Visakhapatnam Junction, which is connected to various cities across the country by regular trains. Additionally, there are well-maintained highways connecting Visakhapatnam to nearby cities and states.</p></div>
 		<div id="page3">
 			<div class="p1">
-				<svg
-					fill="cornflowerblue"
-					viewBox="0 0 50 50"
-					xmlns="http://www.w3.org/2000/svg"
-					xmlns:xlink="http://www.w3.org/1999/xlink"
-					stroke="#789"
-				>
-					<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-					<g
-						id="SVGRepo_tracerCarrier"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-					></g>
-					<g id="SVGRepo_iconCarrier">
-						<path
-							d="M12 0C5.4375 0 3 2.167969 3 8L3 41C3 42.359375 3.398438 43.339844 4 44.0625L4 47C4 48.652344 5.347656 50 7 50L11 50C12.652344 50 14 48.652344 14 47L14 46L36 46L36 47C36 48.652344 37.347656 50 39 50L43 50C44.652344 50 46 48.652344 46 47L46 44.0625C46.601563 43.339844 47 42.359375 47 41L47 9C47 4.644531 46.460938 0 40 0 Z M 15 4L36 4C36.554688 4 37 4.449219 37 5L37 7C37 7.550781 36.554688 8 36 8L15 8C14.449219 8 14 7.550781 14 7L14 5C14 4.449219 14.449219 4 15 4 Z M 11 11L39 11C41 11 42 12 42 14L42 26C42 28 40.046875 28.9375 39 28.9375L11 29C9 29 8 28 8 26L8 14C8 12 9 11 11 11 Z M 2 12C0.898438 12 0 12.898438 0 14L0 22C0 23.101563 0.898438 24 2 24 Z M 48 12L48 24C49.105469 24 50 23.101563 50 22L50 14C50 12.898438 49.105469 12 48 12 Z M 11.5 34C13.433594 34 15 35.566406 15 37.5C15 39.433594 13.433594 41 11.5 41C9.566406 41 8 39.433594 8 37.5C8 35.566406 9.566406 34 11.5 34 Z M 38.5 34C40.433594 34 42 35.566406 42 37.5C42 39.433594 40.433594 41 38.5 41C36.566406 41 35 39.433594 35 37.5C35 35.566406 36.566406 34 38.5 34Z"
-						></path>
-					</g>
-				</svg>
+				
+				
+				<svg viewBox="0 0 1024 1024" class="icon" id="svg1" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M453.12 948.032h131.264c6.4 0 12.48 0.576 18.688 1.344V157.952c0-51.072-38.656-92.416-86.336-92.416-47.744 0-86.464 41.344-86.464 92.416v792c7.552-1.216 15.104-1.92 22.848-1.92z" fill="#C4E4EF"></path><path d="M603.072 313.6l324.8 346.176v78.592L603.072 570.624zM603.072 788.16l87.104 90.752v92.864l-87.104-25.984zM430.336 782.4l-87.04 90.752v92.736l87.04-25.92zM430.336 312.32l-324.8 346.048v78.72l324.8-167.808zM502.144 949.44h30.144c1.408 0 2.944 0.128 4.288 0.384v-189.376c0-12.16-8.896-22.08-19.84-22.08s-19.904 9.856-19.904 22.08v189.504a28.8 28.8 0 0 1 5.312-0.512z" fill="#6AA4CA"></path></g></svg>
 				<br /><br />
-				<h1>Curabitur at elit eu risus</h1>
+				<h1>Airport</h1>
 				<p class="part4">
-					Sed ultrices sit amet mi eu malesuada. Cras ultricies gravida nisi, ac
-					pellentesque nunc tincidunt quis. Aenean at ornare lacus. Duis
-					imperdiet lacus justo.
+					The passenger terminal can handle 700 arriving and 1300 departing passengers. It covers an area of 31,400 square meters. The airport has a total of 18 parking bays
 				</p>
 			</div>
 			<div class="p2">
-				<svg
-					fill="cornflowerblue"
-					viewBox="0 0 30 30"
-					xmlns="http://www.w3.org/2000/svg"
-					xmlns:xlink="http://www.w3.org/1999/xlink"
-				>
-					<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-					<g
-						id="SVGRepo_tracerCarrier"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-					></g>
-					<g id="SVGRepo_iconCarrier">
-						<path
-							d="M19 4 A 1.0001 1.0001 0 0 0 18.058594 5.3359375L19.367188 9L10.414062 9L9.7949219 8L11 8 A 1.0001 1.0001 0 1 0 11 6L8.1425781 6 A 1.0001 1.0001 0 0 0 8.0234375 5.9882812 A 1.0001 1.0001 0 0 0 7.8398438 6L7 6 A 1.0001 1.0001 0 1 0 7 8L7.4433594 8L8.8125 10.210938L7.4863281 13.195312C7.0096806 13.072551 6.5137723 13 6 13C2.6981361 13 0 15.698136 0 19C0 22.301864 2.6981361 25 6 25C8.9603849 25 11.427922 22.82834 11.908203 20L15.416016 20 A 1.0007938 1.0007938 0 0 0 15.433594 20 A 1.0001 1.0001 0 0 0 15.441406 20 A 1.0007938 1.0007938 0 0 0 15.632812 19.980469 A 1.0001 1.0001 0 0 0 15.644531 19.976562 A 1.0007938 1.0007938 0 0 0 15.728516 19.955078 A 1.0001 1.0001 0 0 0 15.808594 19.927734 A 1.0007938 1.0007938 0 0 0 15.822266 19.921875 A 1.0001 1.0001 0 0 0 15.832031 19.917969 A 1.0007938 1.0007938 0 0 0 15.912109 19.876953 A 1.0001 1.0001 0 0 0 15.972656 19.841797 A 1.0007938 1.0007938 0 0 0 15.984375 19.833984 A 1.0001 1.0001 0 0 0 16.138672 19.708984 A 1.0007938 1.0007938 0 0 0 16.150391 19.697266 A 1.0001 1.0001 0 0 0 16.166016 19.677734 A 1.0007938 1.0007938 0 0 0 16.216797 19.621094 A 1.0001 1.0001 0 0 0 16.265625 19.554688 A 1.0007938 1.0007938 0 0 0 16.267578 19.552734 A 1.0001 1.0001 0 0 0 16.316406 19.46875 A 1.0007938 1.0007938 0 0 0 16.324219 19.453125 A 1.0001 1.0001 0 0 0 16.332031 19.439453L20.238281 11.441406L21.070312 13.771484C19.241926 14.802189 18 16.760917 18 19C18 22.301864 20.698136 25 24 25C27.301864 25 30 22.301864 30 19C30 15.698136 27.301864 13 24 13C23.642302 13 23.29399 13.036989 22.953125 13.097656L20.417969 6L22 6 A 1.0001 1.0001 0 1 0 22 4L19 4 z M 11.654297 11L18.226562 11L15.330078 16.933594L11.654297 11 z M 10.085938 12.267578L13.636719 18L11.908203 18C11.626418 16.340588 10.664706 14.906428 9.3144531 14.005859L10.085938 12.267578 z M 6 15C6.224635 15 6.4400877 15.029439 6.6542969 15.064453L5.0859375 18.59375 A 1.0001 1.0001 0 0 0 6 20L9.8613281 20C9.4188032 21.72841 7.8729191 23 6 23C3.7790164 23 2 21.220984 2 19C2 16.779016 3.7790164 15 6 15 z M 24 15C26.220984 15 28 16.779016 28 19C28 21.220984 26.220984 23 24 23C21.779016 23 20 21.220984 20 19C20 17.613879 20.693063 16.400396 21.753906 15.683594L23.058594 19.335938 A 1.0001 1.0001 0 1 0 24.941406 18.664062L23.644531 15.035156C23.763685 15.024634 23.877955 15 24 15 z M 8.4824219 15.878906C9.1509504 16.410155 9.6423248 17.144619 9.8613281 18L7.5390625 18L8.4824219 15.878906 z"
-						></path>
-					</g>
-				</svg>
-				><br /><br />
-				<h1>Nunc sed metus vel nisi</h1>
+				
+				<svg viewBox="0 0 1024 1024" class="icon" id="svg2" version="1.1" xmlns="http://www.w3.org/2000/svg" 
+				fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" 
+				stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+					<path d="M341.333333 768a21.333333 21.333333 0 0 0-21.333333-21.333333h-85.333333a21.333333
+					 21.333333 0 0 0-21.333334 21.333333v128a21.333333 21.333333 0 0 0 21.333334 21.333333h85.333333a21.333333 
+					 21.333333 0 0 0 21.333333-21.333333v-128zM810.666667 768a21.333333 21.333333 0 0 
+					 0-21.333334-21.333333h-85.333333a21.333333 21.333333 0 0 0-21.333333 21.333333v128a21.333333 
+					 21.333333 0 0 0 21.333333 21.333333h85.333333a21.333333 21.333333 0 0 0 21.333334-21.333333v-128z" 
+					 fill="#455A64"></path><path d="M800 85.333333h-576A53.333333 53.333333 0 0 0 170.666667 138.666667V789.333333s0 
+					 42.666667 42.666666 42.666667h597.333334c42.666667 0 42.666667-42.666667 42.666666-42.666667V138.666667A53.333333 
+					 53.333333 0 0 0 800 85.333333z" fill="#FFC107"></path><path d="M213.333333 479.978667a32 32 0 0 1-32 32h-21.333333a32 
+					 32 0 0 1-32-32V416A32 32 0 0 1 160 384h21.333333a32 32 0 0 1 32 32v63.978667zM896 479.978667a32 32 0 0 1-32 
+					 32h-21.333333a32 32 0 0 1-32-32V416a32 32 0 0 1 32-32h21.333333a32 32 0 0 1 32 32v63.978667z" fill="#FFC107">
+					</path><path d="M288 693.333333m-53.333333 0a53.333333 53.333333 0 1 0 106.666666 0 53.333333 53.333333 0 1 0-106.666666 0Z" 
+					fill="#FFF8E1"></path><path d="M736 693.333333m-53.333333 0a53.333333 53.333333 0 1 0 106.666666 0 53.333333 53.333333 0 1
+					 0-106.666666 0Z" fill="#FFF8E1"></path><path d="M778.666667 128h-533.333334A32 32 0 0 0 213.333333 160v341.333333a53.333333
+					  53.333333 0 0 0 53.333334 53.333334h490.666666a53.333333 53.333333 0 0 0 53.333334-53.333334v-341.333333A32 32 0 0 0 778.666667 
+					  128z" fill="#9FA8DA"></path><path d="M810.666667 256H213.333333V160A32 32 0 0 1 245.333333 128h533.333334A32 32 0 0 1 810.666667 
+					  160V256z" fill="#263238"></path><path d="M256 170.666667h234.666667v42.666666H256zM533.333333 170.666667h85.333334v42.666666h-85.333334z" 
+					  fill="#64DD17"></path><path d="M448 554.666667h-170.666667v-160a32 32 0 0 1 32-32h106.666667a32 32 0 0 1 32 32V554.666667zM746.666667 
+					  554.666667h-170.666667v-160a32 32 0 0 1 32-32h106.666667a32 32 0 0 1 32 32V554.666667z" fill="#7986CB"></path><path d="M606.506667 
+					  554.666667c-5.674667-6.336-9.173333-13.589333-9.173334-21.333334 0-23.125333 29.312-42.666667 64-42.666666s64 19.541333 64 42.666666c0 
+					  7.744-3.498667 14.997333-9.173333 21.333334h48.042667c2.24-6.848 3.797333-13.909333 3.797333-21.333334 0-47.061333-47.850667-85.333333-106.666667-85.333333s-106.666667 
+					  38.272-106.666666 85.333333c0 7.424 1.557333 14.485333 3.797333 21.333334h48.042667z" fill="#3949AB"></path></g></svg>
+				<br /><br />
+				<h1>RTC Complex</h1>
 				<p class="part4">
-					Praesent ut finibus leo. Duis et tempus ipsum, id pretium nunc.
-					Vivamus imperdiet sem quis orci pharetra convallis. Nunc a tempus
-					nisi, sed fringilla purus. In hac habitasse platea.
+					APSRTC has bus services traversing the length and breadth of this city as residents of Visakhapatnam prefer city buses that extent across the city and its suburbs. .
 				</p>
 			</div>
 			<div class="p3">
-				<svg
-					fill="cornflowerblue"
-					viewBox="0 0 24 24"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-					<g
-						id="SVGRepo_tracerCarrier"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-					></g>
-					<g id="SVGRepo_iconCarrier">
-						<path
-							d="M2,7V21a1,1,0,0,0,1,1H13V6H3A1,1,0,0,0,2,7ZM5,9h5v2H5Zm0,4h5v2H5Zm0,4h5v2H5ZM22,3V21a1,1,0,0,1-1,1H15V4H10V3a1,1,0,0,1,1-1H21A1,1,0,0,1,22,3Z"
-						></path>
-					</g>
-				</svg>
-				><br /><br />
-				<h1>Fusce sed nisi sagittis</h1>
+				
+				<svg viewBox="0 0 1024 1024" class="icon" id="svg3" version="1.1" xmlns="http://www.w3.org/2000/svg"
+				 fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" 
+				 stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M316.3 805.2h391.2v29.1H316.3z" 
+					fill="#A4A9AD"></path><path d="M316.3 805.2v29.1h41l15.3-29.1zM707.5 805.2v29.1h-41l-15.3-29.1z" fill="">
+
+					</path><path d="M249.7 887.7h524.4v29.1H249.7z" fill="#A4A9AD"></path><path d="M256.4 887.7l-6.7 12.8v16.3h64.2l15.3-29.1zM767.4
+					 887.7l6.7 12.8v16.3h-64.2l-15.3-29.1z" fill=""></path><path d="M205.6 959.7c-5.5 0-8-4-5.4-8.9l141.6-269c2.6-4.9 8.7-6.8
+					  13.6-4.2l39.2 20.6c4.9 2.6 6.8 8.7 4.2 13.6L273 950.8c-2.6 4.9-9.2 8.9-14.8 8.9h-52.6z" fill="#333E48"></path><path d="M346.5
+					   672.9l-62 117.8h72.8l46.2-87.8z" fill=""></path><path d="M818.2 959.7c5.5 0 8-4 5.4-8.9L682 681.8c-2.6-4.9-8.7-6.8-13.6-4.2l-39.2
+					    20.6c-4.9 2.6-6.8 8.7-4.2 13.6l125.8 239c2.6 4.9 9.2 8.9 14.8 8.9h52.6z" fill="#333E48"></path><path d="M677.3 672.9l62 117.8h-72.8l-46.2-87.8z"
+						 fill=""></path><path d="M767.5 104.3c0-22.1-18.1-40.3-40.3-40.3H296.6c-22.1 0-40.3 18.1-40.3 40.3v609.9c0 22.1 18.1 40.3 40.3 40.3h430.6c22.1 0
+						  40.3-18.1 40.3-40.3V104.3z" fill="#FF5959"></path><path d="M355.9 637.4m-45.3 0a45.3 45.3 0 1 0 90.6 0 45.3 45.3 0 1 0-90.6 0Z" fill="">
+							
+						  </path><path d="M667.9 637.4m-45.3 0a45.3 45.3 0 1 0 90.6 0 45.3 45.3 0 1 0-90.6 0Z" fill=""></path><path d="M713.2 282.6c0-16.6-13.6-30.2-30.2-30.2H340.8c-16.6 0-30.2 13.6-30.2 30.2v212c0 16.6 13.6 30.2 30.2 30.2H683c16.6 0 30.2-13.6 30.2-30.2v-212z" fill="#FFFFFF"></path><path d="M604.5 524.9c0-51.1-41.5-92.6-92.6-92.6-51.1 0-92.6 41.5-92.6 92.6h185.2z" fill="#A4A9AD"></path><path d="M683 252.4H340.8c-16.6 0-30.2 13.6-30.2 30.2v50.1c0-16.6 13.6-30.2 30.2-30.2H683c16.6 0 30.2 13.6 30.2 30.2v-50.1c0-16.6-13.6-30.2-30.2-30.2z" fill=""></path><path d="M340.8 267c-8.6 0-15.7 7-15.7 15.7v212c0 8.6 7 15.7 15.7 15.7H683c8.6 0 15.7-7 15.7-15.7v-212c0-8.6-7-15.7-15.7-15.7H340.8zM683 539.4H340.8c-24.7 0-44.7-20.1-44.7-44.7v-212c0-24.7 20.1-44.7 44.7-44.7H683c24.7 0 44.7 20.1 44.7 44.7v212c0 24.6-20 44.7-44.7 44.7zM713.2 154.7c0-16.6-13.6-30.2-30.2-30.2H340.8c-16.6 0-30.2 13.6-30.2 30.2v12.8c0 16.6 13.6 30.2 30.2 30.2H683c16.6 0 30.2-13.6 30.2-30.2v-12.8z" fill="#333E48"></path><path d="M683 124.5H340.8c-16.6 0-30.2 13.6-30.2 30.2v12.8c0 1.7 0.2 3.4 0.5 5 2.4-14.2 14.8-25.2 29.7-25.2H683c14.9 0 27.3 10.9 29.7 25.2 0.3-1.6 0.5-3.3 0.5-5v-12.8c0-16.6-13.6-30.2-30.2-30.2z" fill=""></path><path d="M355.9 615.9m-45.3 0a45.3 45.3 0 1 0 90.6 0 45.3 45.3 0 1 0-90.6 0Z" fill="#FFB819"></path><path d="M667.9 615.9m-45.3 0a45.3 45.3 0 1 0 90.6 0 45.3 45.3 0 1 0-90.6 0Z" fill="#FFB819"></path><path d="M600.9 754.5v-51.3c0-16.6-13.6-30.2-30.2-30.2H453.1c-16.6 0-30.2 13.6-30.2 30.2v51.3h178z" fill="#D1D3D3"></path><path d="M422.9 701.2h177.9v29.1H422.9z" fill="#A4A9AD"></path><path d="M590.4 620.9h-157c-8 0-14.5-6.5-14.5-14.5s6.5-14.5 14.5-14.5h157c8 0 14.5 6.5 14.5 14.5s-6.5 14.5-14.5 14.5z" fill="#FFFFFF"></path></g></svg>
+				<br /><br />
+				<h1>Railway Station</h1>
 				<p class="part4">
-					Donec vestibulum libero nisl. Curabitur ac orci ac lorem blandit
-					volutpat. Sed ac sodales nibh, ut porttitor elit. Sed id dui mi.
-					Vestibulum ante ipsum primis in faucibus.
+					Visakhapatnam is one of the major railway stations in the south central zone of Indian railways, situated in Andhra Pradesh .The Visakhapatnam railway station lies on main Chennai Howrah route.
 				</p>
 			</div>
 		</div>
 		<div class="page4">
 			<div class="i1">
-				<p id="i2">Our Work</p>
+				<p id="i2">Vizag Tourism</p>
 				<p class="part5">
-					"Curabitur ac orci ac lorem blandit volutpat. Sed ac sodales nibh, ut
-					porttitor elit. Sed id dui mi. Vestibulum ante ipsum primis in
-					faucibus orci luctus et ultrices posuere cubilia."
+					Some popular tourist attractions in Visakhapatnam include RK Beach, Kailasagiri Hill Park, Araku Valley, Yarada Beach, Bheemli, Rushikonda, Dolphin’s Nose, Submarine Museum, and Simhachalam Temple,.
 				</p>
 			</div>
 			<br /><br />
-			<div class="images">
-				<div>
-					<img class="im1" src="./gallery-img-01.jpg" />
-					<div class="onim1">
-						<h3 id="hello">Hello</h3>
-					</div>
+			<div id="carouselExampleIndicators" class="carousel slide mb-2" data-ride="carousel">
+				<ol class="carousel-indicators">
+				  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active bg-info"></li>
+				  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner d-flex justify-content-between">
+				  <div class="carousel-item active">
+					<img class="im1" src="./beach.jpg" class="d-block w-100" alt="beach" title="rk beach">
+					<img class="im1" src="./k1.webp" class="d-block w-100" alt="Kailasagiri" title="Kailasagiri">
+					<img class="im1" src="./mountain.png" class="d-block w-100" alt="mountain" title="Hill park">
+				  </div>
+				  <div class="carousel-item  justify-content">
+					<img  class="im1" src="./yarada.jpg" class="d-block w-100" alt="yarada" title="yarada">
+					<img  class="im1" src="./light.png" class="d-block w-100" alt="lighthouse" title="lighthouse">
+					<img  class="im1" src="./novtel.webp" class="d-block w-100" alt="novtel" title="novtel">
+				  </div>
+				  <div class="carousel-item  justify-content">
+					<img class="im1" src="./church.jpeg" class="d-block w-100" alt="Church" title="church">
+					<img class="im1" src="./aruku.jpg" class="d-block w-100" alt="aruku" title="Aruku valley">
+					<img class="im1" src="./cafe.webp" class="d-block w-100" alt="cafe" title="cafe">
+				  </div>
 				</div>
-
-				<div>
-					<img class="im1" src="./gallery-img-02.jpg" />
-					<div class="onim1">
-						<h3>Hello</h3>
-					</div>
-				</div>
-				<div>
-					<img class="im1" src="./gallery-img-03.jpg" />
-					<div class="onim1">
-						<h3>Hello</h3>
-					</div>
-				</div>
-				<div>
-					<img class="im1" src="./gallery-img-04.jpg" />
-					<div class="onim1">
-						<h3>Hello</h3>
-					</div>
-				</div>
-				<div>
-					<img class="im1" src="./gallery-img-05.jpg" />
-					<div class="onim1">
-						<h3>Hello</h3>
-					</div>
-				</div>
-			</div>
+				<button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+				  <span class="carousel-control-prev-icon " aria-hidden="true" style="color: black!important;;"></span>
+				  <span class="sr-only">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				  <span class="sr-only">Next</span>
+				</button>
+			  </div>
+			  <button class="btn btn btn-primary" id="explore"><a href="https://youtu.be/mdL9aRlQq1U?si=YFF0cCMXY35cDBY_">Explore more</a></button>
 		</div>
 		<div id="page5">
-
+			<div class="f-content">Contact us</div>
+			<p class="final">Visit our FAQ Section to find answers to common queries <span class="mailme"><a class="git" href="https://github.com/vamsi1-code">https://github.com/vamsi1-code</a></span></p>
+			<div class="icons">
+					<div class="call"><ion-icon name="call-outline"></ion-icon>
+					<a href="tel:6303524256" class="mailme">6303524256</a></div>
+					<div class="mail"><ion-icon name="mail-open-outline"></ion-icon>
+					<a href="mailto:vamsikrishnagedela07@gmail.com" class="mailme">vamsikrishnagedela07@gmail.com</a></div>
+					<div class="call"><ion-icon name="location-outline"></ion-icon>
+						<a href="tel:6303524256" class="mailme">Location On Maps</a></div>
+						<div class="mail"><input placeholder="...suggestions" type="text"style="opacity: 0.5;border-radius:7px;width:30%; font-size:18px;height:40px;">
+							<a href="mailto:vamsikrishnagedela07@gmail.com" class="mailme"><input type="submit" class="btn btn-light" formaction="mailto:vamsigedela2003@gmail.com"  id="submit" ></a></div>
+			</div>
+			<div class="footer"><p class="final">Copyright © 2024 MANA VIZAG - VAMSI: </p></div>
 		</div>
+	</div>
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 	</body>
 </html>
